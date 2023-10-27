@@ -8,8 +8,6 @@ import {create_volume,create_transfer,create_outgo,create_system} from "./irmode
 let v1 = create_volume(2.0,"liver","");
 
 let v2 = create_volume(3,null,null);
-name must be a string. ignoring.
-comment must be a string. ignoring.
 
 let t1 = create_transfer(0.1,v1,v2,"");
 
