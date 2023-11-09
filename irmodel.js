@@ -105,7 +105,7 @@ export function create_transfer(value,from,to,comment) {
 // outgos - массив обменов с внешней средой
 // comment - строка с пояснением
 // создаёт систему. все типы объектов проверяются. целостность системы не проверяется, это делает сервер
-export function create_system(volumes,transfers,outgos,comment) {
+export function create_system(volumes,transfers,outgos,name,comment) {
   if (typeof comment !== "string") {
     console.log("comment must be a string. ignoring.");
     comment = "";
@@ -129,5 +129,9 @@ export function create_system(volumes,transfers,outgos,comment) {
     console.log("comment must be a string. ignoring.");
     comment = "";
   }
-  return {"__system__":true,"volumes":volumes,"transfers":transfers,"outgos":outgos,"comment":comment};
+  if (typeof name !== "string") {
+    console.log("name must be a string. ignoring.");
+    name = "";
+  }
+  return {"__system__":true,"volumes":volumes,"transfers":transfers,"outgos":outgos,"name":name,"comment":comment};
 }
