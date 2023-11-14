@@ -2,7 +2,7 @@ irmodel
 =======
 irmodel - intermediate representation model
 JS модуль, предназначенный для сериолизации данных для сервера.
-```
+```javascript
 import {create_volume,create_transfer,create_outgo,create_system} from "./irmodel.js"
 
 let v1 = create_volume(2.0,"liver","");
